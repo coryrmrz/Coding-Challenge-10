@@ -41,3 +41,14 @@ purchaseProductButton.addEventListener("click", () => {
         alert(`Out of Stock`); //displays out of stock message
     }
 });
+
+//Task 5: Implement Event Delegation for Dynamic Product List
+
+const productList = document.getElementById("product-list"); //define productList
+const addProductButton = document.getElementById("add-product"); //define addProductButton
+
+addProductButton.addEventListener("click", () => {
+    const newProduct = document.createElement("li"); //new product added as "li" on html
+    newProduct.textContent = "Eyeshadow Palette"; //new product diplay output
+    productList.appendChild(newProduct); //insert new product to html
+});
