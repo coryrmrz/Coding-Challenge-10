@@ -21,10 +21,8 @@ const availabilityStatus = document.getElementById("availability-status"); //def
 function updateInventory() {
     if (stock > 0) {
         purchaseProductButton.disabled = false; //if stock is more than 0, then button is available to use
-        availabilityStatus.textContent = `Availability: ${stock}`; //displays how many are available
     } else {
         purchaseProductButton.disabled = true; //if not, then button is disabled
-        availabilityStatus.textContent = `Out of Stock`; //displays out of stock message
     }
 }
 purchaseProductButton.addEventListener("click", () => {
@@ -33,3 +31,13 @@ purchaseProductButton.addEventListener("click", () => {
 });
 
 updateInventory(); //Initializes page
+
+//Task 4: Create a Checkout Event
+
+purchaseProductButton.addEventListener("click", () => {
+    if (stock > 0) {
+        alert(`Availability: ${stock}`); //displays how much product is available
+    } else {
+        alert(`Out of Stock`); //displays out of stock message
+    }
+});
